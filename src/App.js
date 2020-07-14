@@ -19,8 +19,13 @@ function App() {
 
   }, [values]);
 
-  const handleSubmit = () => {
+  function handleSubmit(){
     setShow(!show);
+  }
+
+  function handleReset() {
+    setShow(!show);
+    setValues(() => ({no_of_digits: '', no_of_inputs: ''}))
   }
 
   return (
@@ -40,12 +45,12 @@ function App() {
               <div className="error">{errors.no_of_digits && errors.no_of_digits}</div>
             </section>
           </div>
-          <button className="button" disabled={!values.no_of_inputs || !values.no_of_digits} type="text" onClick={handleSubmit}>Show</button>
+          <button className="button" disabled={!values.no_of_inputs || !values.no_of_digits} type="text" onClick={() => handleSubmit()}>Show</button>
         </div> :
         <CreditCardInput
           noOfDigits={parseInt(values.no_of_digits)}
           noOfInputs={parseInt(values.no_of_inputs)}
-          handleContentChange={handleSubmit}/>
+          handleContentChange={handleReset}/>
         }
     </div>
   )
