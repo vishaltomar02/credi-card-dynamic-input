@@ -65,7 +65,7 @@ function CreditCardInput(props) {
 
   return (
     <div className="container">
-      <button className="button" type="text" onClick={props.handleContentChange}>Reset</button>
+      <button className="button" type="text" onClick={() => props.handleContentChange()}>Reset</button>
       <h2>Enter you Card Number</h2>
       <div className="card-input">
         <h3>Card Number:</h3>
