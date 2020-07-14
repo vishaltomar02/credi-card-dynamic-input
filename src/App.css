@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 100vh;
+  width: 100vw;
+  padding: 2em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.app header {
+  margin-top: 2em;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgba(0,0,0, 0.7);
+}
+
+.main-inputs {
+  display: flex;
+  margin-top: 1.5em;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.main-inputs section {
+  margin-top: 1.2em;
+}
+
+.main-inputs label {
+  color: #797979;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.main-inputs input {
+  height: 2em;
+  width: 60px;
+  border: 1px solid grey;
+  outline: none;
+  border-radius: 5px;
+  font-size: 18px;
+  letter-spacing: 5px;
+  padding: 0 0 0 10px;
+}
+
+.main-inputs input:focus {
+  border: 2px solid rgba(58, 177, 247, 0.7);
+}
+
+.main-inputs .error {
+  font-size: 16px;
+  color: red;
+}
+
+.app .button {
+  margin-top: 2em;
+  width: 80px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  background: rgb(109, 207, 153);
+  border: none;
+  cursor: pointer;
   color: white;
+  transition: all 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.app .button:hover {
+  transform: scale(1.12);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h2 {
+  margin-bottom: 1em;
+}
+
+.container .card-input {
+  padding: 1em 0;
+  width: 100%;
+}
+
+.container .card-input h3 {
+  display: inline;
+}
+
+.card-input >div {
+  margin-top: 1em;
+}
+
+.card-input input {
+  width: 70px;
+  margin-right: 1em;
+  border: 1px solid crimson;
+  height: 50px;
+  font-size: 18px;
+  letter-spacing: 4px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.card-input input:focus {
+  border: 2px solid rgb(133, 208, 231);
 }
