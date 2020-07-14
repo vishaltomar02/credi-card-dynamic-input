@@ -79,6 +79,7 @@ function CreditCardInput(props) {
                   ref={(element => inputRefs.current[index] = element)}
                   id={item.id}
                   type="number"
+                  disabled={index>0 && (!inputValues[index-1] || (inputValues[index-1] && inputValues[index-1].length<digits))}
                   value={inputValues[index]}
                   onKeyDown={(e) => handleKeyDown(e)}
                   onChange={(e) => handleChange(e)}></input>
